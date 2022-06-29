@@ -1,8 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:html';
 
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -13,7 +17,7 @@ class LoginPage extends StatelessWidget {
             "assets/images/login_image.png",
             fit: BoxFit.cover,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
           Text(
@@ -45,6 +49,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 ElevatedButton(
                     onPressed: () {
+                      // ignore: avoid_print
                       print("pressed by anagha");
                     },
                     style: TextButton.styleFrom(),
